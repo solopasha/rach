@@ -1,0 +1,2 @@
+[org/gnome/shell]
+favorite-apps = ['org.gnome.Terminal.desktop', 'nautilus.desktop', 'firefox.desktop']
