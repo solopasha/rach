@@ -1,16 +1,16 @@
---- /usr/bin/mkarchiso  2022-01-05 14:27:28.673213004 +0000
-+++ mkarchiso   2022-01-05 14:28:48.003213032 +0000
-@@ -532,6 +532,8 @@
-         "${pacstrap_dir}/usr/lib/systemd/boot/efi/systemd-bootx64.efi" \
-         "${pacstrap_dir}/usr/share/edk2-shell/x64/Shell_Full.efi" \
-         "${profile}/efiboot/" \
-+       "${pacstrap_dir}/usr/share/preloader-signed/PreLoader.efi" \
-+        "${pacstrap_dir}/usr/share/preloader-signed/HashTool.efi" \
-         "${pacstrap_dir}/boot/vmlinuz-"* \
-         "${pacstrap_dir}/boot/initramfs-"*".img" \
-         "${_available_ucodes[@]}" \
-@@ -541,7 +543,13 @@
-
+--- /usr/bin/mkarchiso	2022-05-30 10:25:33.000000000 +0300
++++ mkarchiso	2022-06-01 13:41:32.631403164 +0300
+@@ -610,6 +610,8 @@
+     efiboot_files+=("${pacstrap_dir}/usr/lib/systemd/boot/efi/systemd-bootx64.efi"
+                     "${pacstrap_dir}/usr/share/edk2-shell/x64/Shell_Full.efi"
+                     "${profile}/efiboot/"
++                    "${pacstrap_dir}/usr/share/preloader-signed/PreLoader.efi" \
++                    "${pacstrap_dir}/usr/share/preloader-signed/HashTool.efi" \
+                     "${pacstrap_dir}/boot/vmlinuz-"*
+                     "${pacstrap_dir}/boot/initramfs-"*".img"
+                     "${_available_ucodes[@]}")
+@@ -620,7 +622,13 @@
+ 
      # Copy systemd-boot EFI binary to the default/fallback boot path
      mcopy -i "${work_dir}/efiboot.img" \
 -        "${pacstrap_dir}/usr/lib/systemd/boot/efi/systemd-bootx64.efi" ::/EFI/BOOT/BOOTx64.EFI
@@ -21,6 +21,6 @@
 +
 +    mcopy -i "${work_dir}/efiboot.img" \
 +        "${pacstrap_dir}/usr/lib/systemd/boot/efi/systemd-bootx64.efi" ::/EFI/BOOT/loader.efi
-
+ 
      # Copy systemd-boot configuration files
      mmd -i "${work_dir}/efiboot.img" ::/loader ::/loader/entries

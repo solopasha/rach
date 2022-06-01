@@ -79,7 +79,6 @@ _yay(){
 _serv() {
   systemctl mask systemd-rfkill@.service
   systemctl mask systemd-rfkill.socket
-  systemctl enable haveged.service
   systemctl enable pacman-init.service
   systemctl enable choose-mirror.service
   systemctl enable systemd-resolved.service
@@ -89,6 +88,7 @@ _serv() {
   systemctl enable reflector.service
   systemctl enable sshd.service
   systemctl enable gdm.service
+  systemctl enable hv_fcopy_daemon.service hv_kvp_daemon.service hv_vss_daemon.service vmtoolsd.service vmware-vmblock-fuse.service
   systemctl set-default graphical.target
 }
 

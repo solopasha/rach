@@ -4,19 +4,19 @@ arch-install-scripts
 archinstall
 b43-fwcutter
 base
-bind-tools
+bind
 brltty
 broadcom-wl
 btrfs-progs
 clonezilla
 cloud-init
-crda
 cryptsetup
 darkhttpd
 ddrescue
 dhclient
 dhcpcd
 diffutils
+dmidecode
 dmraid
 dnsmasq
 dosfstools
@@ -36,6 +36,7 @@ gptfdisk
 grml-zsh-config
 grub
 hdparm
+hyperv
 intel-ucode
 ipw2100-fw
 ipw2200-fw
@@ -51,6 +52,7 @@ libusb-compat
 linux
 linux-atm
 linux-firmware
+linux-firmware-marvell
 livecd-sounds
 lsscsi
 lvm2
@@ -73,6 +75,8 @@ nilfs-utils
 nmap
 ntfs-3g
 nvme-cli
+open-iscsi
+open-vm-tools
 openconnect
 openssh
 openvpn
@@ -99,7 +103,6 @@ squashfs-tools
 sudo
 syslinux
 systemd-resolvconf
-wireguard-tools
 tcpdump
 terminus-font
 testdisk
@@ -109,8 +112,6 @@ udftools
 usb_modeswitch
 usbmuxd
 usbutils
-neovim
-virtualbox-guest-utils
 vpnc
 wireless-regdb
 wireless_tools
@@ -119,11 +120,14 @@ wvdial
 xfsprogs
 xl2tpd
 zsh
+crda
+wireguard-tools
+neovim
+virtualbox-guest-utils
 xorg
 gdm
 bash-completion
 networkmanager
-haveged
 firefox
 
 #GNOME Applications
@@ -146,11 +150,11 @@ nautilus
 xdg-user-dirs-gtk
 neofetch
 noto-fonts
-qgnomeplatform
+qgnomeplatform-qt5
+qgnomeplatform-qt6
 xdg-desktop-portal-gnome
 
 ## Virt Tools
-open-vm-tools
 xf86-video-vmware
 
 ## fonts
@@ -160,7 +164,6 @@ ttf-opensans
 
 ## sound
 alsa-firmware
-alsa-utils
 gstreamer
 gstreamer-vaapi
 gst-libav
@@ -168,12 +171,13 @@ gst-plugins-bad
 gst-plugins-base
 gst-plugins-good
 gst-plugins-ugly
-pulseaudio
-pulseaudio-alsa
-pulseaudio-bluetooth
+pipewire
+pipewire-pulse
+pipewire-alsa
+pipewire-jack
 libcdio
 libdvdread
 libdvdnav
-
 archlinuxcn-keyring
 preloader-signed
+paru
